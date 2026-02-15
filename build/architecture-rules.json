@@ -1,0 +1,35 @@
+{
+  "layers": {
+    "Core": "Tool.Core",
+    "Application": "Tool.Application",
+    "Infrastructure": "Tool.Infrastructure",
+    "UI": "Tool.UI.WinForms",
+    "HostDesktop": "Tool.Host.Desktop",
+    "HostRest": "Tool.Host.RestServer"
+  },
+  "allowedDependencies": {
+    "Tool.Core": [],
+    "Tool.Application": [
+      "Tool.Core"
+    ],
+    "Tool.Infrastructure": [
+      "Tool.Core",
+      "Tool.Application"
+    ],
+    "Tool.UI.WinForms": [
+      "Tool.Application",
+      "Tool.Core"
+    ],
+    "Tool.Host.Desktop": [
+      "Tool.UI.WinForms",
+      "Tool.Application",
+      "Tool.Infrastructure",
+      "Tool.Core"
+    ],
+    "Tool.Host.RestServer": [
+      "Tool.Application",
+      "Tool.Infrastructure",
+      "Tool.Core"
+    ]
+  }
+}
